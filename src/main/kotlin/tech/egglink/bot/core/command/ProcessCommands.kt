@@ -13,8 +13,9 @@ class ProcessCommands {
         Untils.regCmd.register(CommandWhitelist())
         Untils.regCmd.register(CommandWhitelistAdd())
         Untils.regCmd.register(CommandBroadcast())
-        Untils.regCmd.register(CommandDebugMode())
+        Untils.regCmd.register(CommandDebug())
         Untils.regCmd.register(CommandHelp())
+        Untils.regCmd.register(CommandBlacklist())
     }
 
     suspend fun run(input: String, sender: GroupMessageEvent): Boolean {

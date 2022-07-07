@@ -13,6 +13,7 @@ class Config: Configuration() {
     val serverStartStopMessage: Boolean = true
     val enableWhiteList: Boolean = false
     var whiteList: ArrayList<String> = arrayListOf("1000|Somebody")
+    var blackList: ArrayList<Long> = arrayListOf()
     var record: ArrayList<String> = arrayListOf()
     val message = Message()
     val group = Group()

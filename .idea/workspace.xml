@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a624a2a3-c974-47f3-b340-191a29bdea8e" name="变更" comment="" />
+    <list default="true" id="a624a2a3-c974-47f3-b340-191a29bdea8e" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandBlacklist.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/ConfigUserData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/Config.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/Config.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/CommandRegister.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/CommandRegister.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/ProcessCommands.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/ProcessCommands.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandDebugMode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandDebug.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/Configuration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/Configuration.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +25,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin Enum" />
+        <option value="Kotlin Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -40,6 +55,9 @@
     <option name="vmOptions" value="-Xmx8G -Xms8G" />
   </component>
   <component name="ProjectId" id="2BNkzNbQBVMr1YZGmn3P74Mvgje" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,6 +65,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
     <property name="project.structure.last.edited" value="项目" />
     <property name="project.structure.proportion" value="0.0" />
@@ -108,5 +127,16 @@
       <updated>1656754196080</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -9,8 +9,8 @@ import tech.egglink.bot.internal.commands.Sender
 import tech.egglink.bot.untils.Untils
 import java.util.*
 
-@Command("debug", "command.debugMode.usage", "command.debugMode.description", 0)
-class CommandDebugMode: Commands() {
+@Command("debug", "command.debug.usage", "command.debug.description", 0)
+class CommandDebug: Commands() {
     override suspend fun onCommand(sender: Sender, args: List<String>, all: String): Boolean {
         val event: GroupMessageEvent = sender.getGroup() ?: throw IllegalStateException("Sender is not in group")
         val config: Config = Untils.config

@@ -159,7 +159,16 @@ class CommandRegister {
                                     }
                                 }
                             }
-
+                            "blacklist" -> {
+                                when (descriptionArray[2]) {
+                                    "description" -> {
+                                        result = Untils.config.commands.blacklistDescription
+                                    }
+                                    "usage" -> {
+                                        result = Untils.config.commands.blacklistUsage
+                                    }
+                                }
+                            }
                         }
                     }
                 }
