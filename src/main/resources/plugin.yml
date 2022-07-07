@@ -1,0 +1,39 @@
+name: BotCommand
+main: tech.egglink.bot.BotCommand
+version: 1.1
+api-version: 1.19
+
+commands:
+  bot:
+    permission: botcommand.bot.use
+    permission-message: "You do not have permission to do this!"
+    description: "Main Command"
+    usage: "/bot help"
+
+
+permissions:
+  botcommand.bot.use:
+    default: true
+  botcommand.bot.login:
+    default: op
+  botcommand.bot.logout:
+    default: op
+  botcommand.bot.chat:
+    default: true
+  botcommand.bot.log:
+    default: true
+  botcommand.bot.version:
+    default: true
+  botcommand.bot.reload:
+    default: op
+  botcommand.bot.admin:
+    default: op
+    children: [
+      botcommand.bot.use,
+      botcommand.bot.login,
+      botcommand.bot.logout,
+      botcommand.bot.chat,
+      botcommand.bot.log,
+      botcommand.bot.version,
+      botcommand.bot.reload
+    ]
