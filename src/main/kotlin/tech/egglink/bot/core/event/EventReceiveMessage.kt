@@ -29,6 +29,9 @@ class EventReceiveMessage {
                 }
                 return@subscribeAlways
             }
+            if (sender.id in config.blackList) {
+                return@subscribeAlways
+            }
             if (!ProcessCommands().run(message.substring(1), event)) {
                 group.sendMessage(Untils.regCmd.getCommand(message.substring(1).split(" ")[0])
                     ?.let { Untils.regCmd.getUsage(it) } ?: "none")
