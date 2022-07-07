@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a624a2a3-c974-47f3-b340-191a29bdea8e" name="变更" comment="Fix Debug Translation&#10;Add Blacklist Command(CommandBlacklist.kt) (Not implement it)&#10;Add ConfigUserData.kt for the next features">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/event/EventReceiveMessage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/event/EventReceiveMessage.kt" afterDir="false" />
+    <list default="true" id="a624a2a3-c974-47f3-b340-191a29bdea8e" name="变更" comment="Implement Blacklist">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandBlacklist.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandBlacklist.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/Configuration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/Configuration.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657165827237</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement Blacklist">
+      <created>1657166041632</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657166041632</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix Debug Translation&#10;Add Blacklist Command(CommandBlacklist.kt) (Not implement it)" />
     <MESSAGE value="Fix Debug Translation&#10;Add Blacklist Command(CommandBlacklist.kt) (Not implement it)&#10;Add ConfigUserData.kt for the next features" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Debug Translation&#10;Add Blacklist Command(CommandBlacklist.kt) (Not implement it)&#10;Add ConfigUserData.kt for the next features" />
+    <MESSAGE value="Implement Blacklist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Blacklist" />
   </component>
 </project>

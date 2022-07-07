@@ -58,7 +58,7 @@ open class Configuration {
         val helpDescription: String = "Get the help list"
         val helpUsage: String = "Usage: !help"
         val helpTemplate: String = "Command: \$command\n\$usage\nDescription: \$description\n\n"
-        val blacklistUsage: String = "Usage: !blacklist <name>"
+        val blacklistUsage: String = "Usage: !blacklist <add/remove> <name>"
         val blacklistDescription: String = "Add someone to the blacklist"
     }
 
