@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a624a2a3-c974-47f3-b340-191a29bdea8e" name="变更" comment="Implement Blacklist">
+    <list default="true" id="a624a2a3-c974-47f3-b340-191a29bdea8e" name="变更" comment="Implement Blacklist&#10;Add Message Call back&#10;Add Save Module">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandPermission.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/CommandRegister.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/CommandRegister.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/ProcessCommands.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/ProcessCommands.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandBlacklist.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandBlacklist.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandBroadcast.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandBroadcast.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandDebug.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandDebug.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandWhitelistAdd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/command/group/CommandWhitelistAdd.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/event/EventReceiveMessage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/core/event/EventReceiveMessage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/internal/commands/Sender.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/internal/commands/Sender.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/qq/MiraiSupport.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/qq/MiraiSupport.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/ConfigUserData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/ConfigUserData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/Configuration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/Configuration.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/Untils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/tech/egglink/bot/untils/Untils.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +81,14 @@
       <recent name="J:\Projects\Kotlin\BotCommand\docs" />
       <recent name="J:\Projects\Kotlin\BotCommand\src\test\kotlin" />
     </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="tech.egglink.bot.core.command.group.werewolf" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="tech.egglink.bot.core.command.group.werewolf" />
+    </key>
   </component>
-  <component name="RunManager" selected="Kotlin.RandomKt">
+  <component name="RunManager" selected="Maven.BotCommand [assembly:assembly]">
     <configuration name="RandomKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RandomKt" />
       <module name="BotCommand" />
@@ -132,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657166041632</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implement Blacklist&#10;Add Message Call back&#10;Add Save Module">
+      <created>1657168106667</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657168106667</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +175,7 @@
     <MESSAGE value="Fix Debug Translation&#10;Add Blacklist Command(CommandBlacklist.kt) (Not implement it)" />
     <MESSAGE value="Fix Debug Translation&#10;Add Blacklist Command(CommandBlacklist.kt) (Not implement it)&#10;Add ConfigUserData.kt for the next features" />
     <MESSAGE value="Implement Blacklist" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Blacklist" />
+    <MESSAGE value="Implement Blacklist&#10;Add Message Call back&#10;Add Save Module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Blacklist&#10;Add Message Call back&#10;Add Save Module" />
   </component>
 </project>

@@ -33,6 +33,7 @@ open class Configuration {
         val whitelistAppendFailed: String = "Your account failed to bind to \$name"
         val whitelistAppendSuccessfully: String = "Your account has bound to \$name"
         val debugTemplate: String = "DEBUG LOGS:\n \$message"
+        val noPermission: String = "You do not have permission to do this!"
     }
     inner class BotCommand {
         val usage: String = "&c&lUsage: /bot <help/login/logout/version/log/reload> <...>"
@@ -60,6 +61,10 @@ open class Configuration {
         val helpTemplate: String = "Command: \$command\n\$usage\nDescription: \$description\n\n"
         val blacklistUsage: String = "Usage: !blacklist <add/remove> <name>"
         val blacklistDescription: String = "Add someone to the blacklist"
+        val permissionUsage: String = "Usage: !permission <id> <add/remove> <permission>"
+        val permissionDescription: String = "Add or remove a permission to a player"
+        val alreadyExistsPermission: String = "The permission already exists!"
+        val notExistsPermission: String = "The permission does not exist!"
     }
 
     fun appendDebugFile(user: String,message: String) {

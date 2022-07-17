@@ -2,6 +2,7 @@ package tech.egglink.bot.core.command
 
 import tech.egglink.bot.internal.commands.Command
 import tech.egglink.bot.internal.commands.Commands
+import tech.egglink.bot.internal.commands.TargetType
 import tech.egglink.bot.untils.Untils
 
 class CommandRegister {
@@ -16,6 +17,10 @@ class CommandRegister {
     private val commandNameMap = mutableMapOf<Commands, String>()
     // 生成一个 Map，存储参数个数
     private val paramCountMap = mutableMapOf<Commands, Int>()
+    // 生成一个 Map，存储作用位置
+    private val targetTypeMap = mutableMapOf<Commands, TargetType>()
+    // 生成一个 Map，存储权限
+    private val permissionMap = mutableMapOf<Commands, String>()
     fun register(command: Commands) {
         commands.add(command)
         // 获取command的注解
@@ -38,6 +43,14 @@ class CommandRegister {
         val argsCount = annotation.argsCount
         // 将注解的argsCount作为value，command作为key存入map
         paramCountMap[command] = argsCount
+        // 获取注解的targetType
+        val targetType = annotation.target
+        // 将注解的targetType作为value，command作为key存入map
+        targetTypeMap[command] = targetType
+        // 获取注解的permission
+        val permission = annotation.permission
+        // 将注解的permission作为value，command作为key存入map
+        permissionMap[command] = permission
     }
 
     fun getUsage(command: Commands): String {
@@ -66,7 +79,17 @@ class CommandRegister {
         return commands
     }
 
-    fun translate(description: String): String {
+    // 获取作用位置
+    fun getTargetType(command: Commands): TargetType {
+        return targetTypeMap[command] ?: TargetType.GROUP
+    }
+
+    // 获取权限
+    fun getPermission(command: Commands): String {
+        return permissionMap[command] ?: ""
+    }
+
+    private fun translate(description: String): String {
         // 将描述翻译为指定的文字
         // 生成结果变量
         var result = description
@@ -166,6 +189,16 @@ class CommandRegister {
                                     }
                                     "usage" -> {
                                         result = Untils.config.commands.blacklistUsage
+                                    }
+                                }
+                            }
+                            "permission" -> {
+                                when (descriptionArray[2]) {
+                                    "description" -> {
+                                        result = Untils.config.commands.permissionDescription
+                                    }
+                                    "usage" -> {
+                                        result = Untils.config.commands.permissionUsage
                                     }
                                 }
                             }

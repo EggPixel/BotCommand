@@ -8,17 +8,12 @@ import tech.egglink.bot.internal.commands.Commands
 import tech.egglink.bot.internal.commands.Sender
 import tech.egglink.bot.untils.Untils
 
-@Command("broadcast", "command.broadcast.usage", "command.broadcast.description")
+@Command("broadcast", "command.broadcast.usage", "command.broadcast.description", permission = "bot.cmd.broadcast")
 class CommandBroadcast: Commands() {
     override suspend fun onCommand(sender: Sender, args: List<String>, all: String): Boolean {
         val config: Config = Untils.config
         val event: GroupMessageEvent = sender.getGroup() ?: throw IllegalStateException("Not a group message")
         config.appendDebugFile(event.senderName,"尝试使用群聊命令: $all")
-        if (event.sender.id !in config.administrator) {
-            ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&',config.message.noPermission))
-                ?.let { it1 -> event.group.sendMessage(it1) }
-            return true
-        }
         if (args.size < 2) {
             return false
         }

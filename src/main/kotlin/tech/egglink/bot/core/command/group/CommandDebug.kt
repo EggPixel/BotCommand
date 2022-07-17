@@ -9,17 +9,12 @@ import tech.egglink.bot.internal.commands.Sender
 import tech.egglink.bot.untils.Untils
 import java.util.*
 
-@Command("debug", "command.debug.usage", "command.debug.description", 0)
+@Command("debug", "command.debug.usage", "command.debug.description", 0, permission = "bot.cmd.debug")
 class CommandDebug: Commands() {
     override suspend fun onCommand(sender: Sender, args: List<String>, all: String): Boolean {
         val event: GroupMessageEvent = sender.getGroup() ?: throw IllegalStateException("Sender is not in group")
         val config: Config = Untils.config
         config.appendDebugFile(event.senderName,"尝试使用群聊命令: $all")
-        if (event.sender.id !in config.administrator) {
-            ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&',config.message.noPermission))
-                ?.let { it1 -> event.group.sendMessage(it1) }
-            return true
-        }
         // 获取日志信息
         // 遍历 config 中的 record
         // record格式: 列表 每项为 [时间]用户: [操作] 并使用base64编码

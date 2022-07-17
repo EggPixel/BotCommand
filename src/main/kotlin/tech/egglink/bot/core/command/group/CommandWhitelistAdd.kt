@@ -9,17 +9,12 @@ import tech.egglink.bot.internal.commands.Commands
 import tech.egglink.bot.internal.commands.Sender
 import tech.egglink.bot.untils.Untils
 
-@Command(name = "whitelist-add", usage = "command.whitelist-add.usage", description = "command.whitelist-add.description")
+@Command(name = "whitelist-add", usage = "command.whitelist-add.usage", description = "command.whitelist-add.description", permission = "bot.cmd.whitelist-add")
 class CommandWhitelistAdd: Commands() {
     override suspend fun onCommand(sender: Sender, args: List<String>, all: String): Boolean {
         val event: GroupMessageEvent = sender.getGroup() ?: throw IllegalStateException("Sender is not in group")
         val config: Config = Untils.config
         config.appendDebugFile(event.senderName,"尝试使用群聊命令: $all")
-        if (event.sender.id !in config.administrator) {
-            ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&',config.message.noPermission))
-                ?.let { it1 -> event.group.sendMessage(it1) }
-            return true
-        }
         if (args.size != 1 && args.size != 2) {
             return false
         }

@@ -16,7 +16,7 @@ class MiraiSupport {
     fun login(userID: Long, userPassword: String): Boolean {
         bot = BotFactory.newBot(userID, userPassword, configuration = BotConfiguration {
             loginSolver = BotLoginSolver()
-            protocol = BotConfiguration.MiraiProtocol.ANDROID_PHONE
+            protocol = BotConfiguration.MiraiProtocol.MACOS
         })
         return if (bot.isOnline) {
             isLogin = true

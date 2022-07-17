@@ -12,7 +12,7 @@ import tech.egglink.bot.untils.Untils
 import java.io.File
 import java.io.FileWriter
 
-@Command("blacklist", "command.blacklist.usage", "command.blacklist.description", 2)
+@Command("blacklist", "command.blacklist.usage", "command.blacklist.description", 2, permission = "bot.cmd.blacklist")
 class CommandBlacklist: Commands() {
     override suspend fun onCommand(sender: Sender, args: List<String>, all: String): Boolean {
         // args[0] = add | remove
@@ -21,11 +21,6 @@ class CommandBlacklist: Commands() {
         val config = Untils.config
         val event = sender.getGroup() ?: throw IllegalStateException("Group not found")
         config.appendDebugFile(event.senderName,"尝试使用群聊命令: $all")
-        if (event.sender.id !in config.administrator) {
-            ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&',config.message.noPermission))
-                ?.let { it1 -> event.group.sendMessage(it1) }
-            return true
-        }
         when (args[0]) {
             "add" -> {
                 try {

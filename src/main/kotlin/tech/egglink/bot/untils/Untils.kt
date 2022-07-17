@@ -23,6 +23,34 @@ class Untils {
         val event: EventReceiveMessage = EventReceiveMessage()
         const val version: Double = 1.0
         val regCmd: CommandRegister = CommandRegister()
+        val permissionList: List<String> = listOf("bot.true", "bot.cmd.permission", "bot.cmd.debug",
+            "bot.cmd.broadcast", "bot.cmd.blacklist", "bot.cmd.whitelist-add")
+
+        fun getUserData(id: Long): ConfigUserData {
+            val parent = File(plugin.dataFolder ,"data")
+            if (!parent.exists()) {
+                parent.mkdir()
+            }
+            var result = ConfigUserData()
+            val gson: Gson = GsonBuilder().setPrettyPrinting().create()
+            val file = File(parent, "$id.json")
+            result.qid = id
+            if (!file.exists()) {
+                try {
+                    FileWriter(file).use { it.write(gson.toJson(result)) }
+                } catch (e: Exception) {
+                    Logger().error("Unable to save file...")
+                }
+            }
+            try {
+                FileReader(file).use {
+                    result = gson.fromJson(it, ConfigUserData::class.java)
+                }
+            } catch (exception: Exception) {
+                Logger().error("Unable to read file!")
+            }
+            return result
+        }
     }
     fun getConfiguration() {
         val gson: Gson = GsonBuilder().setPrettyPrinting().create()
